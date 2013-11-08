@@ -1,6 +1,6 @@
 name             'Resque monitoring'
-maintainer       'misfit'
-maintainer_email 'Binh Nguyen'
+maintainer       'Misfitwearables'
+maintainer_email 'binh@misfitwearables.com'
 license          'All rights reserved'
 description      'Installs/Configures base'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
