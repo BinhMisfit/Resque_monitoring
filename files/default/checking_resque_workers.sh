@@ -23,7 +23,7 @@ echo $id1
 
 hostname=`hostname -s`
 
-body1="[RESQUE WORKERS IS FINE][$hostname]"
+body1="[RESQUE WORKERS ARE FINE][$hostname]"
 body2="[RESQUE WORKERS HAVE NOT UPDATED NEW CODES][$hostname]"
 body3="[FIXED ISSUES!][$hostname]"
 MESSAGE1="[$hostname] FINE!"
