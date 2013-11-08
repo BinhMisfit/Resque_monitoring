@@ -7,3 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 #
+
+require 'mail'
+
