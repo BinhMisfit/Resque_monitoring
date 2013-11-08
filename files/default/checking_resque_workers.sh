@@ -38,15 +38,17 @@ back_end_email3="khoathai@misfitwearables.com"
 back_end_email4="quan@misfitwearables.com"
 back_end_email5="hoan@misfitwearables.com"
 back_end_email6="winston@misfitwearables.com"
+qa_email="thinh@misfitwearables.com"
 
 if [ "$id1" == "$id" ] 
 then
-  echo $MESSAGE1 | mail -s "$body1" "$back_end_email1" "$back_end_email2" "$back_end_email3" "$back_end_email4"
+  echo "Resque workers are running with latest codes!!! Fine!"
+  echo $MESSAGE1 | mail -s "$body1" "$qa_email" "$back_end_email1" "$back_end_email2" "$back_end_email3" "$back_end_email4" "$back_end_email5" "$back_end_email6"
 else
   echo "Resque workers have not been updated!!!"
-  echo $MESSAGE2 | mail -s "$body2" "$back_end_email" "$back_end_email2" "$back_end_email3" "$back_end_email4"
+  echo $MESSAGE2 | mail -s "$body2" "$qa_email" "$back_end_email" "$back_end_email2" "$back_end_email3" "$back_end_email4" "$back_end_email5" "$back_end_email6" 
   echo "DO restart resque workers!"
   echo $ACTION
   echo "Finish!"
-  echo $MESSAGE3 | mail -s "$body3" "$back_end_email" "$back_end_email2" "$back_end_email3" "$back_end_email4"
+  echo $MESSAGE3 | mail -s "$body3" "$qa_email" "$back_end_email" "$back_end_email2" "$back_end_email3" "$back_end_email4" "$back_end_email5" "$back_end_email6"
 fi
