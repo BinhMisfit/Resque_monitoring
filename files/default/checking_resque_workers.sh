@@ -1,6 +1,7 @@
 #! /bin/bash
 
 # set -x
+sudo apt-get install mailutils -y
 
 sleep 15 # Delay a little bit after running chef-client (Maybe resque workers has not started immediately!)
 
