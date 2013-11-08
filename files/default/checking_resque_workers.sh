@@ -1,6 +1,9 @@
 #! /bin/bash
 
 # set -x
+
+sleep 15 # Delay a little bit after running chef-client (Maybe resque workers has not started immediately!)
+
 key_word="var/www/apps/shineapi/releases/"
 line=`ps -Ao command | grep $key_word`
 
