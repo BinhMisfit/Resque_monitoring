@@ -3,29 +3,33 @@
 # set -x
 key_word="var/www/apps/shineapi/releases/"
 line=`ps -Ao command | grep $key_word`
-echo $line
+
 
 id=${line:37:40}
+echo "The current commit ID that resque workers are using:"
 echo $id
 
 line1=`ls -1 -t /var/www/apps/shineapi/releases`
-echo $line1
+echo "The current commit ID that the web-server is using:"
 id1=${line1:0:40}
 echo $id1
 
-body1="[RESQUE WORKERS ARE FINE]"
-body2="[RESQUE WORKERS HAVE NOT UPDATED NEW CODES]"
-body3="[FIXED ISSUES!]"
-MESSAGE1="FINE!"
+hostname=`hostname -s`
 
-MESSAGE2="OMG! RESQUE WORKERS HAVE NOT RESTARTED AFTER RUNNING CHEF-CLIENT!"
-MESSAGE3=" I HAVE RESTARTED RESQUE WORKERS! PLEASE CHECK IT AGAIN!"
+body1="[RESQUE WORKERS IS FINE][$hostname]"
+body2="[RESQUE WORKERS HAVE NOT UPDATED NEW CODES][$hostname]"
+body3="[FIXED ISSUES!][$hostname]"
+MESSAGE1="[$hostname] FINE!"
+
+MESSAGE2="[$hostname] OMG! RESQUE WORKERS HAVE NOT RESTARTED AFTER RUNNING CHEF-CLIENT!"
+MESSAGE3="[$hostname] I HAVE RESTARTED RESQUE WORKERS! PLEASE CHECK IT AGAIN!"
 
 ACTION=`sudo service resquewks-shineapi restart`
-back_end_email1="chan@misfitwearables.com"
+
+# back_end_email1="chan@misfitwearables.com"
 back_end_email2="binh@misfitwearables.com"
-back_end_email3="khoathai@misfitwearables.com"
-back_end_email4="quan@misfitwearables.com"
+# back_end_email3="khoathai@misfitwearables.com"
+# back_end_email4="quan@misfitwearables.com"
 if [ "$id1" == "$id" ] 
 then
   echo $MESSAGE1 | mail -s "$body1" "$back_end_email1" "$back_end_email2" "$back_end_email3" "$back_end_email4"

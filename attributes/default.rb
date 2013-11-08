@@ -1,1 +1,1 @@
-default [:checking_resque_path]="/home/ubuntu/checking_resque"
+default["checking_resque_path"]="/home/ubuntu/checking_resque"

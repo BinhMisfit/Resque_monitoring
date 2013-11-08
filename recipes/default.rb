@@ -8,7 +8,7 @@
 #
 #
 
-require 'mail'
+include_recipe "postfix"
 
 directory "#{node[:checking_resque_path]}" do
   owner "root"
