@@ -32,10 +32,13 @@ MESSAGE3="[$hostname] I HAVE RESTARTED RESQUE WORKERS! FIXED IT!"
 
 ACTION=`sudo service resquewks-shineapi restart`
 
-# back_end_email1="chan@misfitwearables.com"
+back_end_email1="chan@misfitwearables.com"
 back_end_email2="binh@misfitwearables.com"
-# back_end_email3="khoathai@misfitwearables.com"
-# back_end_email4="quan@misfitwearables.com"
+back_end_email3="khoathai@misfitwearables.com"
+back_end_email4="quan@misfitwearables.com"
+back_end_email5="hoan@misfitwearables.com"
+back_end_email6="winston@misfitwearables.com"
+
 if [ "$id1" == "$id" ] 
 then
   echo $MESSAGE1 | mail -s "$body1" "$back_end_email1" "$back_end_email2" "$back_end_email3" "$back_end_email4"
