@@ -1,4 +1,4 @@
-name             'Resque monitoring'
+name             'Resque_monitoring'
 maintainer       'Misfitwearables'
 maintainer_email 'binh@misfitwearables.com'
 license          'All rights reserved'
